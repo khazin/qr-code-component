@@ -1,0 +1,111 @@
+:root {
+    /* Color Variables */
+    --color-white: hsl(0, 0%, 100%);
+    --color-slate-300: hsl(212, 45%, 89%);
+    --color-slate-500: hsl(216, 15%, 48%);
+    --color-slate-900: hsl(218, 44%, 22%);
+
+    /* Typography Variables */
+    --font-family-outfit: 'Outfit', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-size-paragraph: 1.5rem; /* 15px */
+    --font-size-text-preset-1: 2.2rem; /* 22px */
+    --font-size-text-preset-2: 1.5rem; /* 15px */
+
+     /* Spacing Variables */
+     --spacing-200: 1.6rem; /* 16px */
+     --spacing-300: 2.4rem; /* 24px */
+ 
+    /* Breakpoints */
+    --breakpoint-phone: 320px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-laptop: 1024px;
+    --breakpoint-desktop: 1280px;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* Color Variables */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Base Body Styles */
+body {
+    font-family: var(--font-family-outfit);
+    font-size: 1.6rem; /* 16px */
+    line-height: 1.5;
+    background-color: #d5e1ef;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; /* Default position set to relative */
+}
+
+/* Container for the QR Code Component */
+.qr-code-container {
+    display: flex;
+    padding: var(--spacing-200, 16px) var(--spacing-200, 16px) var(--spacing-500, 40px) var(--spacing-200, 16px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-300, 24px);
+
+   border-radius: 2rem;
+   background: var(--color-white, #FFF);
+
+   /* card-shadow */
+    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+    max-width: 32rem; /* 320px */
+}
+
+.qr-code-image {
+    /* layout */    
+    width: 28.8rem; /* 288px */
+    height: 28.8rem; /* 288px */
+    border-radius: 1rem; /* 10px */
+}
+.qr-code-text{
+    /* layout */
+    display: flex;
+    padding: 0px var(--spacing-200, 16px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-200, 16px);
+    align-self: stretch;
+    /* typography */
+    
+    text-align: center;
+    font-style: normal;
+}
+.qr-code-container h1 {
+    color: var(--color-slate-900, #1F314F);
+    font-weight: var(--font-weight-bold, 700);
+    line-height: 120%; /* 26.4px */
+    font-size: var(--font-size-text-preset-1, 22px);
+}
+
+.qr-code-container p {
+    color: var(--color-slate-500, #68778D);
+    font-weight: var(--font-weight-regular, 400);
+    line-height: 140%; /* 21px */
+    letter-spacing: 0.2px;
+    font-size: var(--font-size-text-preset-2, 15px);
+}
+
+.attribution {
+   
+    bottom: 1rem; /* Adjust spacing as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem; /* Adjust font size if needed */
+    text-align: center;
+    color: var(--color-slate-500, #666); /* Optional: Use a lighter color */
+}
